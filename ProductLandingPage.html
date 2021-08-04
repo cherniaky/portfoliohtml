@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Landing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(224, 218, 224);
+            text-align: left;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #page-wrapper {
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-wrap: wrap;
+            }
+        }
+
+        #header {
+            height: auto;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgb(224, 218, 224);
+
+        }
+
+        #logo {
+            width: 60vw;
+        }
+
+        @media (max-width: 650px) {
+            .logo {
+
+                width: 100%;
+                position: relative;
+            }
+        }
+
+        #header-img {
+            max-width: 400px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                margin-top: 10px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 0 50px;
+            }
+
+            nav li {
+                padding-bottom: 5px;
+            }
+
+            nav>ul {
+                flex-direction: column;
+            }
+        }
+
+        #page-wrapper {
+            position: relative;
+        }
+
+
+        nav {
+            font-weight: 400;
+        }
+
+        nav>ul {
+            display: flex;
+            width: 35vw;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        @media(max-width:650px) {
+            #nav-bar {
+                width: 100%;
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            border: rgb(224, 218, 224);
+            background-color: rgb(224, 218, 224);
+            color: black;
+
+        }
+
+        #form {
+            padding-top: 50px;
+            display: inline absolute;
+            text-align: center;
+        }
+
+        #email {
+            padding: 1px;
+            width: 19%;
+        }
+
+
+
+        .submit:hover {
+            background-color: orange;
+            transition: background-color 1s;
+        }
+
+        #l {
+            display: inline-block;
+        }
+
+
+
+        .grid {
+            display: flex;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+
+        }
+
+        #features {
+            margin-top: 40px;
+        }
+
+        #features .icon {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            height: 125px;
+            width: 10vw;
+            color: darkorange;
+        }
+        @media (max-width:650px) {
+             #features .icon{
+                 display: none;
+             }
+            
+        }
+
+        #features .desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 125px;
+            width: 80vw;
+
+
+        }
+
+        #how-it-works {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #how-it-works>iframe {
+         height: 315px;
+            max-width: 560px;
+            width: 100%;
+        }
+
+        #pricing {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: calc(100% / 3);
+            margin: 10px;
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+
+        .product>.level {
+            background-color: rgb(180, 177, 177);
+            color: black;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .product>h2 {
+            margin-top: 15px;
+        }
+
+        .product>ol {
+            margin: 15px 0px;
+            margin-right: 20px;
+        }
+
+        .product>ol>li {
+            padding: 5px 0;
+        }
+
+        .submit {
+            border: 0;
+            margin: 15px 0;
+            background-color: #f1c40f;
+            font-weight: 400;
+            height: 40px;
+            font-size: 1em;
+            text-transform: uppercase;
+            padding: 0 20px;
+        }
+
+        .product>button:hover {
+            background-color: orange;
+            transition: background-color 1s;
+        }
+
+        #form>input {
+            border: 0;
+            margin: 15px 0;
+            background-color: #f1c40f;
+            font-weight: 400;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgb(204, 199, 199);
+            width: 100%;
+
+        }
+        footer>ul{
+            display: flex;
+            justify-content: flex-end;
+        }
+        footer>ul>li{
+            padding: 0px 10px;
+        }
+        footer>span{
+            margin-top: 10px;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: flex-end;
+            color: rgb(110, 109, 109);
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <div id="page-wrapper">
+        <header id="header">
+            <div id="logo">
+                <img id="header-img" src="product-landing-page-logo.png" alt="logo">
+            </div>
+
+            <nav id="nav-bar">
+                <ul>
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+    <div id="form">
+        <form>
+
+            <br>
+            <h4> Handcrafted, home-made masterpieces </h4>
+            <br>
+            <input type="email" name="" id="email" placeholder="Enter your email adress" required>
+            <br>
+            <br>
+            <input type="submit" class="submit" src=" https://www.freecodecamp.com/email-submit" value="Get started">
+        </form>
+    </div>
+    <div class="container">
+        <section id="features">
+            <div class="grid">
+                <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+                <div class="desc">
+                    <h2>Premium Materials</h2>
+                    <p>
+                        Our trombones use the shiniest brass which is sourced locally. This
+                        will increase the longevity of your purchase.
+                    </p>
+                </div>
+
+            </div>
+            <div class="grid">
+                <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+                <div class="desc">
+                    <h2>Fast Shipping</h2>
+                    <p>
+                        We make sure you recieve your trombone as soon as we have finished
+                        making it. We also provide free returns if you are not satisfied.
+                    </p>
+                </div>
+
+            </div>
+            <div class="grid">
+                <div class="icon"><i class="fa fa-3x fa-battery-full"></i></div>
+                <div class="desc">
+                    <h2>Quality Assurance</h2>
+                    <p>
+                        For every purchase you make, we will ensure there are no damages or
+                        faults and we will check and test the pitch of your instrument.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="how-it-works">
+            <iframe id="video" 
+                src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+                frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section id="pricing">
+            <div class="product " id="tenor">
+                <div class="level">Tenor Trombone</div>
+                <h2>300$</h2>
+                <ol>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ol>
+                <button class="submit">Select</button>
+            </div>
+            <div class="product " id="tenor">
+                <div class="level">Bass Trombone</div>
+                <h2>600$</h2>
+                <ol>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ol>
+                <button class="submit">Select</button>
+            </div>
+            <div class="product " id="tenor">
+                <div class="level">Tenor Trombone</div>
+                <h2>900$</h2>
+                <ol>
+                    <li>Plays similar to a Trumpet</li>
+                    <li>Great for Jazz Bands</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ol>
+                <button class="submit">Select</button>
+            </div>
+
+        </section>
+
+
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <span>Copyright 2016, Original Trombones</span>
+    </footer>
+
+</body>
+
+</html>
